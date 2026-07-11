@@ -2,6 +2,7 @@
 import { BUSINESS, HOURS, BOOKSY_URL } from '../config'
 
 
+
 function InstagramIcon() {
   return (
     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -37,24 +38,6 @@ export default function Contact() {
               leftInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
             }`}
           >
-            {/* Phone */}
-            <div className="flex items-start gap-5">
-              <div className="w-12 h-12 bg-gold-400/10 border border-gold-400/20 flex items-center justify-center flex-shrink-0">
-                <svg className="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-white font-semibold text-sm tracking-wider uppercase mb-1">Phone</h3>
-                <a
-                  href={`tel:${BUSINESS.phone.replace(/[^0-9+]/g, '')}`}
-                  className="text-zinc-400 hover:text-gold-400 transition-colors duration-200 text-lg"
-                >
-                  {BUSINESS.phone}
-                </a>
-              </div>
-            </div>
-
             {/* Address */}
             <div className="flex items-start gap-5">
               <div className="w-12 h-12 bg-gold-400/10 border border-gold-400/20 flex items-center justify-center flex-shrink-0">
@@ -150,6 +133,13 @@ export default function Contact() {
                   )
                 })}
               </div>
+              <p className="text-zinc-600 text-xs mt-4 italic">
+                Hours may vary &mdash; check{' '}
+                <a href="https://booksy.com/en-us/dl/show-business/1601417" target="_blank" rel="noopener noreferrer" className="text-gold-400 hover:underline">
+                  Booksy
+                </a>{' '}
+                for availability.
+              </p>
             </div>
 
             {/* Map */}
