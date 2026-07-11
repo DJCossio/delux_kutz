@@ -1,8 +1,8 @@
-﻿import { useInView } from '../hooks/useInView'
+import { useInView } from '../hooks/useInView'
 
 const STATS = [
-  { value: '4+', label: 'Years in the Game' },
-  { value: '24', label: 'Years Young' },
+  { value: '4+', label: 'Years in the Shop' },
+  { value: '24', label: 'Years Old' },
   { value: '100%', label: 'Every Time' },
 ]
 
@@ -17,7 +17,6 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-          {/* Image side */}
           <div
             ref={imgRef}
             className={`relative transition-all duration-1000 ${
@@ -36,7 +35,6 @@ export default function About() {
                 decoding="async"
               />
 
-              {/* Badge */}
               <div className="absolute bottom-6 -right-6 z-20 bg-gold-400 text-dark-900 px-6 py-4 text-center shadow-2xl">
                 <span className="block font-serif text-3xl font-black leading-none">4+</span>
                 <span className="block text-xs uppercase tracking-widest font-semibold mt-1">Years</span>
@@ -44,7 +42,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Text side */}
           <div
             ref={sectionRef}
             className={`transition-all duration-1000 delay-200 ${
@@ -58,7 +55,7 @@ export default function About() {
             <h2 className="section-title mb-2">
               Deluxe Kutz
             </h2>
-            <p className=”text-gold-400 font-serif text-lg italic mb-6”>Barber Lounge &mdash; La Crosse, WI</p>
+            <p className="text-gold-400 font-serif text-lg italic mb-6">Barber Lounge &mdash; La Crosse, WI</p>
 
             <div className="w-12 h-px bg-gold-400 mb-8" />
 
@@ -78,7 +75,6 @@ export default function About() {
               </p>
             </div>
 
-            {/* Tags */}
             <div className="mt-8 flex flex-wrap gap-3">
               {['Skin Fades', 'Beard Design', 'Line-Ups', 'Kids Cuts', 'Eyebrows'].map((tag) => (
                 <span
@@ -90,7 +86,6 @@ export default function About() {
               ))}
             </div>
 
-            {/* Stats */}
             <div className="mt-10 grid grid-cols-3 gap-6 pt-10 border-t border-white/10">
               {STATS.map((stat) => (
                 <div key={stat.label} className="text-center">
