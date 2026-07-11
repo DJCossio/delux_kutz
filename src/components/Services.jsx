@@ -1,12 +1,12 @@
-﻿import { useInView } from '../hooks/useInView'
+import { useInView } from '../hooks/useInView'
 import { BOOKSY_URL } from '../config'
 
 const SERVICES = [
   {
     name: 'Haircut',
     price: '$45',
-    duration: '45 min',
-    description: 'Your style, done right. Fade, taper, texture â€” whatever you need to walk out fresh.',
+    duration: '~45 min',
+    description: 'Your style, done right. Fade, taper, texture - whatever you need to walk out fresh.',
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
@@ -16,8 +16,8 @@ const SERVICES = [
   {
     name: 'Haircut + Beard',
     price: '$60',
-    duration: '60 min',
-    description: 'The full package. Sharp cut plus beard shaped and lined up â€” you\'ll be good.',
+    duration: '~45 min',
+    description: 'The full package. Sharp cut plus beard shaped and lined up - you\'ll be good.',
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -50,7 +50,7 @@ const SERVICES = [
   {
     name: 'Line Up',
     price: '$25',
-    duration: '20 min',
+    duration: '30 min',
     description: 'Edge-up on the hairline, temples, and neck. That finishing touch that hits different.',
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -61,8 +61,8 @@ const SERVICES = [
   {
     name: 'Eyebrows',
     price: '$10',
-    duration: '10 min',
-    description: 'Quick clean-up that makes a big difference. Shaped and lined â€” no more looking rough.',
+    duration: '30 min',
+    description: 'Quick clean-up that makes a big difference. Shaped and lined - no more looking rough.',
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -88,7 +88,6 @@ function ServiceCard({ service, delay }) {
         </div>
       )}
 
-      {/* Icon */}
       <div
         className={`inline-flex items-center justify-center w-14 h-14 mb-6 transition-colors duration-300 ${
           service.featured ? 'text-gold-400 bg-gold-400/10' : 'text-zinc-400 bg-white/5 group-hover:text-gold-400 group-hover:bg-gold-400/10'
@@ -97,7 +96,6 @@ function ServiceCard({ service, delay }) {
         {service.icon}
       </div>
 
-      {/* Name & Price */}
       <div className="flex items-start justify-between mb-3">
         <h3
           className={`font-serif text-xl font-bold transition-colors duration-300 ${
@@ -111,17 +109,14 @@ function ServiceCard({ service, delay }) {
         </span>
       </div>
 
-      {/* Duration */}
       <span className="text-zinc-500 text-xs tracking-widest uppercase mb-4 block">
-        â± {service.duration}
+        &#9201; {service.duration}
       </span>
 
-      {/* Description */}
       <p className="text-zinc-400 text-sm leading-relaxed mb-6">
         {service.description}
       </p>
 
-      {/* Book link */}
       <a
         href={BOOKSY_URL}
         target="_blank"
@@ -144,7 +139,6 @@ export default function Services() {
   return (
     <section id="services" className="py-28 bg-dark-900">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        {/* Header */}
         <div
           ref={headerRef}
           className={`text-center mb-20 transition-all duration-700 ${
@@ -154,21 +148,19 @@ export default function Services() {
           <span className="text-gold-400 text-xs tracking-[0.4em] uppercase font-medium block mb-4">
             What We Offer
           </span>
-          <h2 className="section-title">Services & Pricing</h2>
+          <h2 className="section-title">Services &amp; Pricing</h2>
           <div className="gold-divider" />
           <p className="text-zinc-400 max-w-lg mx-auto text-base leading-relaxed">
             Every service is performed with precision and care. No rush, no shortcuts.
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.map((service, i) => (
             <ServiceCard key={service.name} service={service} delay={i * 80} />
           ))}
         </div>
 
-        {/* Book all */}
         <div className="text-center mt-14">
           <a
             href={BOOKSY_URL}
