@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0A0A0A;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 bg-gold-400 text-dark-900 font-semibold px-8 py-4 rounded-none tracking-widest text-sm uppercase transition-all duration-300 hover:bg-gold-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-dark-900;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border border-gold-400 text-gold-400 font-semibold px-8 py-4 rounded-none tracking-widest text-sm uppercase transition-all duration-300 hover:bg-gold-400 hover:text-dark-900 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-dark-900;
+  }
+
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl font-bold text-white;
+  }
+
+  .gold-divider {
+    @apply w-16 h-px bg-gold-400 mx-auto my-6;
+  }
+
+  .section-wrapper {
+    @apply py-24 px-6 md:px-12 max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .animate-on-enter {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .animate-on-enter.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-on-enter-delay-1 {
+    transition-delay: 0.1s;
+  }
+
+  .animate-on-enter-delay-2 {
+    transition-delay: 0.2s;
+  }
+
+  .animate-on-enter-delay-3 {
+    transition-delay: 0.3s;
+  }
+
+  .animate-on-enter-delay-4 {
+    transition-delay: 0.4s;
+  }
+
+  .animate-on-enter-delay-5 {
+    transition-delay: 0.5s;
+  }
+
+  .text-gold {
+    color: #D4AF37;
+  }
+
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #F0D060 50%, #C9A84C 100%);
+  }
+
+  .card-dark {
+    @apply bg-dark-700 border border-white/5;
+  }
+
+  .nav-blur {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F0D060;
+}
+
+/* Image placeholder shimmer */
+.img-placeholder {
+  background: linear-gradient(90deg, #181818 25%, #222222 50%, #181818 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
