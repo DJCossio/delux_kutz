@@ -3,7 +3,7 @@ import { useInView } from '../hooks/useInView'
 
 const GALLERY_ITEMS = [
   { id: 1, src: '/images/cut-1.webp', alt: 'Clean skin fade by Deluxe Kutz', label: 'Skin Fade' },
-  { id: 2, src: '/images/cut-2.webp', alt: 'Classic side part taper by Deluxe Kutz', label: 'Classic Taper' },
+  { id: 2, src: '/images/cut-2.webp', alt: 'Classic side part taper by Deluxe Kutz', label: 'Mid Drop Fade' },
   { id: 3, src: '/images/cut-3.webp', alt: 'High skin fade by Deluxe Kutz', label: 'High Fade' },
   { id: 4, src: '/images/cut-4.webp', alt: 'Fresh cut by Deluxe Kutz', label: 'Fresh Cut' },
   { id: 5, src: '/images/cut-5.webp', alt: 'Precision cut by Deluxe Kutz', label: 'Precision Cut' },
