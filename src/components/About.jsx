@@ -58,14 +58,14 @@ export default function About() {
             <h2 className="section-title mb-2">
               Deluxe Kutz
             </h2>
-            <p className="text-gold-400 font-serif text-lg italic mb-6">Barber Lounge â€” La Crosse, WI</p>
+            <p className=”text-gold-400 font-serif text-lg italic mb-6”>Barber Lounge &mdash; La Crosse, WI</p>
 
             <div className="w-12 h-px bg-gold-400 mb-8" />
 
             <div className="space-y-5 text-zinc-400 leading-relaxed text-base">
               <p>
-                Young barber. Fresh shop. Real talent. Deluxe Kutz isn't your average spot â€”
-                it's where you come to actually look good, not just get a cut.
+                Young barber. Fresh shop. Real talent. Deluxe Kutz isn&apos;t your average spot &mdash;
+                it&apos;s where you come to actually look good, not just get a cut.
               </p>
               <p>
                 4 years deep in the craft and just opened his own lounge, the mission is simple:
@@ -73,7 +73,7 @@ export default function About() {
                 <span className="text-white font-medium"> looking like the best version of themselves.</span>
               </p>
               <p>
-                The vibe is right, the cuts are clean, and the attention to detail is on point â€”
+                The vibe is right, the cuts are clean, and the attention to detail is on point &mdash;
                 every time, no exceptions.
               </p>
             </div>

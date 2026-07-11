@@ -1,4 +1,3 @@
-﻿import { useState } from 'react'
 import { useInView } from '../hooks/useInView'
 
 const REVIEWS = [
@@ -7,7 +6,7 @@ const REVIEWS = [
     name: 'Marcus J.',
     rating: 5,
     date: '2 weeks ago',
-    text: "Best barber I've ever been to, period. The fade is always perfectly blended and my line up is razor sharp every single time. Book him â€” you won't be disappointed.",
+    text: "Best barber I've ever been to, period. The fade is always perfectly blended and my line up is razor sharp every single time. Book him — you won't be disappointed.",
     initials: 'MJ',
     color: 'bg-blue-500',
   },
@@ -44,7 +43,7 @@ const REVIEWS = [
     name: 'Anthony M.',
     rating: 5,
     date: '1 month ago',
-    text: "Elite Cuts is exactly what the name says â€” elite. Never have to ask for corrections, never leave unsatisfied. Consistent quality every visit. That's rare.",
+    text: "This spot is exactly what the name says — deluxe. Never have to ask for corrections, never leave unsatisfied. Consistent quality every visit. That's rare.",
     initials: 'AM',
     color: 'bg-red-600',
   },
@@ -90,11 +89,10 @@ function ReviewCard({ review, delay }) {
     >
       {review.featured && (
         <div className="absolute top-0 right-0 bg-gold-400 text-dark-900 text-xs font-bold tracking-widest uppercase px-3 py-1">
-          â˜… Top Review
+          &#9733; Top Review
         </div>
       )}
 
-      {/* Quote icon */}
       <svg
         className="w-8 h-8 text-gold-400/20 mb-4"
         fill="currentColor"
@@ -104,13 +102,10 @@ function ReviewCard({ review, delay }) {
         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
       </svg>
 
-      {/* Review text */}
-      <p className="text-zinc-300 leading-relaxed text-sm mb-6 italic">"{review.text}"</p>
+      <p className="text-zinc-300 leading-relaxed text-sm mb-6 italic">&ldquo;{review.text}&rdquo;</p>
 
-      {/* Stars */}
       <Stars rating={review.rating} />
 
-      {/* Author */}
       <div className="flex items-center gap-3 mt-4 pt-4 border-t border-white/5">
         <div
           className={`w-10 h-10 rounded-full ${review.color} flex items-center justify-center text-white text-xs font-bold flex-shrink-0`}
@@ -119,7 +114,7 @@ function ReviewCard({ review, delay }) {
         </div>
         <div>
           <p className="text-white font-semibold text-sm">{review.name}</p>
-          <p className="text-zinc-600 text-xs">{review.date} Â· Google Review</p>
+          <p className="text-zinc-600 text-xs">{review.date} &middot; Google Review</p>
         </div>
       </div>
     </div>
@@ -133,7 +128,6 @@ export default function Reviews() {
   return (
     <section id="reviews" className="py-28 bg-dark-800">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        {/* Header */}
         <div
           ref={headerRef}
           className={`text-center mb-16 transition-all duration-700 ${
@@ -146,11 +140,10 @@ export default function Reviews() {
           <h2 className="section-title">What Clients Say</h2>
           <div className="gold-divider" />
           <p className="text-zinc-400 max-w-lg mx-auto text-base leading-relaxed">
-            Don't take our word for it. Here's what the community is saying.
+            Don&apos;t take our word for it. Here&apos;s what the community is saying.
           </p>
         </div>
 
-        {/* Rating summary */}
         <div
           ref={avgRef}
           className={`flex flex-col sm:flex-row items-center justify-center gap-8 mb-16 p-8 bg-dark-700 border border-white/5 max-w-2xl mx-auto transition-all duration-700 delay-200 ${
@@ -174,14 +167,12 @@ export default function Reviews() {
           </div>
         </div>
 
-        {/* Reviews grid — showing first 3; swap in real Booksy reviews when ready */}
         <div className="grid md:grid-cols-3 gap-5">
           {REVIEWS.slice(0, 3).map((review, i) => (
             <ReviewCard key={review.id} review={review} delay={i * 80} />
           ))}
         </div>
 
-        {/* Google link */}
         <div className="text-center mt-12">
           <p className="text-zinc-500 text-sm">
             Read more reviews on{' '}
