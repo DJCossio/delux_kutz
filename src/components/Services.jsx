@@ -5,7 +5,7 @@ const SERVICES = [
   {
     name: 'Haircut',
     price: '$45',
-    duration: '~45 min',
+    duration: '~1 Hour',
     description: 'Your style, done right. Fade, taper, texture - whatever you need to walk out fresh.',
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -16,7 +16,7 @@ const SERVICES = [
   {
     name: 'Haircut + Beard',
     price: '$60',
-    duration: '~45 min',
+    duration: '~1 hour 15 min',
     description: 'The full package. Sharp cut plus beard shaped and lined up - you\'ll be good.',
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -39,7 +39,7 @@ const SERVICES = [
   {
     name: 'Kids Haircut',
     price: '$40',
-    duration: '30 min',
+    duration: '45 min',
     description: 'Little ones get the same attention as everyone else. Clean cuts for kids 12 and under.',
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

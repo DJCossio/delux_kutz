@@ -6,7 +6,7 @@ const REELS = [
   {
     id: 'ig1',
     thumbnail: '/images/reel-1.webp',
-    caption: 'Clean skin fade. Book the link in bio!',
+    caption: 'Classic taper, book the link in bio!',
     likes: '2.4K',
     comments: '38',
     url: INSTAGRAM_REELS[0],
@@ -14,7 +14,7 @@ const REELS = [
   {
     id: 'ig2',
     thumbnail: '/images/reel-2.webp',
-    caption: 'Classic taper + side part. DM to book your appointment.',
+    caption: 'Mid drop fade, DM to book your appointment.',
     likes: '3.1K',
     comments: '62',
     url: INSTAGRAM_REELS[1],
@@ -22,7 +22,7 @@ const REELS = [
   {
     id: 'ig3',
     thumbnail: '/images/reel-3.webp',
-    caption: 'High fade looking clean as ever. Drop a like if you want this.',
+    caption: 'Day in the life, book today!',
     likes: '1.8K',
     comments: '29',
     url: INSTAGRAM_REELS[2],
