@@ -9,7 +9,7 @@ export const BUSINESS = {
   name: 'Deluxe Kutz',
   subtitle: 'Barber Lounge',
   tagline: 'Precision Cuts. Professional Service.',
-  phone: '(715) 530-3629',
+  phone: '(608) 418-3942',
   address: '730 Rose St, La Crosse, WI 54603',
   instagram: 'https://www.instagram.com/deluxe_kutz',
   googleMapsEmbed: 'https://maps.google.com/maps?q=43.83526,-91.24807&z=15&output=embed',
